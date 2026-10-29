@@ -5,7 +5,8 @@ DuckDB. On top of it: a station-level demand forecast that cuts error 41% vs. a 
 baseline (11% without weather data), and a dashboard showing where bikes pile up and where they
 run out.**
 
-> **Live demo:** _coming soon (Streamlit Community Cloud)_ · Run it locally: `python run.py app`
+> **Live demo:** https://boston-bluebikes-demand.streamlit.app (free tier: if it's asleep, click
+> "wake up" and give it ~30 s) · Run it locally: `python run.py app`
 
 ## Results at a glance
 
