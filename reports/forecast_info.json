@@ -1,0 +1,12 @@
+{
+  "stations": 20,
+  "train_rows": 4920,
+  "val_rows": 600,
+  "test_rows": 1220,
+  "test_start": "2026-08-01",
+  "test_end": "2026-09-30",
+  "best_iterations": {
+    "lightgbm": 991,
+    "lightgbm_no_weather": 260
+  }
+}

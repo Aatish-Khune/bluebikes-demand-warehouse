@@ -1,0 +1,16 @@
+feature,share
+roll_7,0.472
+lag_1,0.231
+temp_max_c,0.053
+precip_mm,0.051
+lag_7,0.03
+wind_max_kmh,0.027
+iso_dow,0.027
+lag_14,0.025
+station_code,0.023
+roll_28,0.016
+temp_min_c,0.015
+snowfall_cm,0.012
+month_num,0.009
+is_holiday,0.006
+is_weekend,0.003

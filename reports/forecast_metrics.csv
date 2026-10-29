@@ -1,0 +1,5 @@
+model,mae,rmse,wape,mae_vs_seasonal_naive_pct
+seasonal_naive (lag 7),34.561,50.118,0.231,0.0
+naive (yesterday),32.086,46.044,0.215,7.2
+lightgbm_no_weather,30.764,42.382,0.206,11.0
+lightgbm,20.459,27.774,0.137,40.8

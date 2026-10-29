@@ -1,0 +1,21 @@
+station_id,station_name,mean_departures,mae_seasonal_naive,mae_lightgbm
+A32002,Commonwealth Ave at Agganis Way,137.59,39.69,24.36
+A32010,South Station - 700 Atlantic Ave,78.33,18.79,11.92
+B32002,Ruggles T Stop - Columbus Ave at Melnea Cass Blvd,105.18,26.31,14.9
+B32005,Christian Science Plaza - Massachusetts Ave at Westland Ave,122.1,25.89,18.07
+B32015,Landmark Center - Brookline Ave at Park Dr,109.84,29.75,17.69
+B32016,Beacon St at Massachusetts Ave,177.1,44.33,24.7
+B32062,Forsyth St at Huntington Ave,133.9,31.03,20.42
+B32065,Massachusetts Ave at Boylston St.,220.16,48.43,25.51
+C32008,Boylston St at Fairfield St,142.85,32.39,18.77
+D32016,Charles Circle - Charles St at Cambridge St,153.57,45.59,23.1
+M32004,Kendall T,107.44,23.41,12.37
+M32005,MIT Stata Center at Vassar St / Main St,107.8,20.7,13.19
+M32006,MIT at Mass Ave / Amherst St,271.07,56.64,46.78
+M32011,Central Square at Mass Ave / Essex St,231.98,41.05,23.41
+M32018,Harvard Square at Mass Ave/ Dunster,198.3,46.87,22.89
+M32037,Ames St at Main St,139.87,33.64,22.74
+M32041,MIT Pacific St at Purrington St,129.15,27.11,13.87
+M32042,MIT Vassar St,187.98,41.44,22.09
+M32061,Mass Ave at Albany St,104.31,24.62,14.32
+M32085,Mass Ave/Lafayette Square,131.84,33.54,18.08

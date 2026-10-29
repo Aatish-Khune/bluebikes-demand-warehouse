@@ -6,7 +6,8 @@ import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_DIR = ROOT / "data"  # raw downloads + DuckDB warehouse (gitignored: license forbids redistribution)
+# Raw downloads + DuckDB warehouse (gitignored: the data license forbids redistribution)
+DATA_DIR = ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 DB_PATH = Path(os.environ.get("BLUEBIKES_DB", DATA_DIR / "warehouse.duckdb"))
 DBT_DIR = ROOT / "dbt"

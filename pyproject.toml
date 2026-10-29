@@ -1,0 +1,13 @@
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]
+# Keep pytest's tmp_path folders inside the project (default is the OS temp directory).
+addopts = "--basetemp=.pytest_tmp"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".venv", "data", "dbt/target", "dbt/logs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
