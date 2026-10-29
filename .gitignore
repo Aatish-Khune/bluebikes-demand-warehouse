@@ -1,0 +1,29 @@
+# Raw Bluebikes data + DuckDB warehouse: Bluebikes Data License forbids redistributing the
+# raw data, so it is downloaded by `python run.py data` and never committed.
+data/
+
+# dbt outputs
+dbt/target/
+dbt/logs/
+logs/
+dbt/.user.yml
+
+# Private interview prep
+INTERVIEW_NOTES.md
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.log
+
+# Secrets
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

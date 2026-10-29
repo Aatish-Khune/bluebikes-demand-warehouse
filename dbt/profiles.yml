@@ -1,0 +1,8 @@
+# Local DuckDB file; the path comes from the BLUEBIKES_DB environment variable (set by run.py).
+bluebikes:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('BLUEBIKES_DB', '../data/warehouse.duckdb') }}"
+      threads: 4

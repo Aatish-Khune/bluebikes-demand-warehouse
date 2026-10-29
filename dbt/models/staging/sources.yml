@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Loaded as-is (all text) by src/bluebikes/ingest.py.
+    tables:
+      - name: trips
+        description: Bluebikes monthly trip files, Oct 2025 - Sep 2026 (Bluebikes Data License).
+      - name: weather
+        description: Open-Meteo daily weather at Boston Logan (CC BY 4.0).

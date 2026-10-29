@@ -1,0 +1,84 @@
+version: 2
+
+models:
+  - name: stg_trips
+    description: Typed, deduplicated trips within the study window.
+    columns:
+      - name: ride_id
+        data_tests: [unique, not_null]
+      - name: rider_type
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["member", "casual"]
+      - name: rideable_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["classic_bike", "electric_bike"]
+      - name: trip_date
+        data_tests: [not_null]
+
+  - name: stg_weather
+    columns:
+      - name: weather_date
+        data_tests: [unique, not_null]
+
+  - name: dim_station
+    description: One row per departure station.
+    columns:
+      - name: station_id
+        data_tests: [unique, not_null]
+      - name: station_name
+        data_tests: [not_null]
+      - name: lat
+        data_tests: [not_null]
+
+  - name: dim_date
+    columns:
+      - name: date_day
+        data_tests: [unique, not_null]
+
+  - name: fct_trips
+    columns:
+      - name: ride_id
+        data_tests: [unique, not_null]
+      - name: trip_date
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_day
+      - name: start_station_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_station')
+                field: station_id
+      - name: end_station_id
+        description: Some end stations never appear as a start in the window, so this is a warning.
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_station')
+                field: station_id
+              config:
+                severity: warn
+
+  - name: fct_station_daily_demand
+    description: Zero-filled station x day grid with weather and calendar features.
+    columns:
+      - name: station_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_station')
+                field: station_id
+      - name: date_day
+        data_tests: [not_null]
+      - name: temp_max_c
+        description: Must be present for every day (weather coverage check).
+        data_tests: [not_null]

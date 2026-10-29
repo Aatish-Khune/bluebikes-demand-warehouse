@@ -1,0 +1,31 @@
+name: bluebikes
+version: "1.0.0"
+config-version: 2
+profile: bluebikes
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "logs"]
+
+vars:
+  start_date: "2025-10-01"
+  end_date: "2026-09-30"
+  dst_fallback_dates: ["2025-11-02"]  # US daylight saving time ends (clocks repeat 1-2 AM)
+
+models:
+  bluebikes:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
+    analytics:
+      +materialized: table
+      +schema: analytics
+
+seeds:
+  bluebikes:
+    +schema: seeds
